@@ -1,0 +1,79 @@
+Bomba: Invierte el texto ingresado
+mae invertir_texto(textillo){
+
+	largo metale llamese trome(textillo)
+
+	diay siii( largo misma vara 0){
+		sarpe 1	
+	}
+
+	resultado metale ~~
+	largo metale (largo quitele 1)
+
+	upee(largo cañazo -1){
+		caracter metale llamese viene_bolita(textillo / largo)
+		resultado metale llamese hacer_menjunje(resultado / caracter)
+		largo metale (largo quitele 1)
+	}
+
+	sarpe resultado
+}
+
+Bomba: Compara dos textos y retorna si son iguales o no
+mae comparar_textos(t1 / t2){
+
+	largo_t1 metale llamese trome(t1)
+	largo_t2 metale llamese	trome(t2)
+
+	diay siii (largo_t1 otra vara largo_t2){
+		safis ~Esta carajada tiene tamaños distintos~
+	}
+
+	largo_t1 metale ( largo_t1 quitele 1 )
+
+	upee(largo_t1 cañazo 0){
+
+		char_t1 metale llamese viene_bolita(t1 / largo_t1)
+		char_t2 metale llamese viene_bolita(t2 / largo_t1)
+
+		diay siii (char_t1 otra vara char_t2){
+			sarpe False
+		}
+
+		largo_t1 metale (largo_t1 quitele 1)
+	}
+
+	sarpe True
+}
+
+Bomba: Determina si un texto es palindromo
+mae palindromo(texto){
+
+	largo metale llamese trome(texto)
+
+	diay siii ( largo misma vara 0){
+		sarpe True
+	}
+
+	texto_invertido metale llamese invertir_texto(texto)
+
+	resultado metale llamese comparar_textos(texto / texto_invertido)
+
+	Bomba: Si es palíndromo
+	diay siii (resultado misma vara True){
+		sarpe True
+
+	Bomba: No es palindromo
+	}sino ni modo{
+		sarpe False
+	}
+}
+		
+
+Bomba: Para correr el ejemplo se debe colocar todo acá
+jefa mae {
+
+	resultado metale llamese palindromo(~arribalabirra~)
+	llamese sueltele(resultado)
+	sarpe 0
+}

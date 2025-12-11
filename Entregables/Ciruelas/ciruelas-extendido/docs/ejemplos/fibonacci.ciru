@@ -1,0 +1,34 @@
+Bomba: Calcula el fibonnacci de n
+mae fibonnacci(n){
+	diay siii( n misma vara 0){
+		sarpe 1
+	}
+
+	diay siii(n misma vara 1){
+		sarpe 1
+	}
+
+	i metale 0
+	j metale 1
+
+	contador metale 1
+
+	upee(contador poquitico n){
+
+		t metale ( i echele j )
+		i metale j
+		j metale t
+		contador metale (contador echele 1)
+	}
+
+	sarpe j
+}
+
+
+Bomba: Para correr el ejemplo se debe colocar todo acá
+jefa mae {
+
+	resultado metale llamese fibonnacci(9) 
+	llamese sueltele(resultado)
+	sarpe 0
+}

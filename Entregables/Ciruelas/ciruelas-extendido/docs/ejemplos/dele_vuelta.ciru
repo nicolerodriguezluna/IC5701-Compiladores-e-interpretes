@@ -1,0 +1,20 @@
+Bomba: Eliminador de espacios
+mae eliminar_espacios(texto){
+    Bomba: Recibe un texto y cambia los espacios por barra baja
+	largo_texto metale llamese trome(texto)
+	resultado metale ~~
+    dele vuelta(i metale 0 / i poquitico largo_texto / i metale (i echele 1)){
+        caracter metale llamese viene_bolita(texto / i)
+        diay siii(caracter misma vara ~ ~){
+            caracter metale ~_~
+        }
+	    resultado metale llamese hacer_menjunje(resultado / caracter)
+    }
+    sarpe resultado
+}
+
+jefe mae {
+	resultado metale llamese eliminar_espacios(~Alto de las Palomas~)
+	llamese sueltele(resultado)
+	sarpe 0
+}

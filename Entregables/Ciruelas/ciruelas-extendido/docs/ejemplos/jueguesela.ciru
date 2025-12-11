@@ -1,0 +1,17 @@
+mae cambio_dolares_colones(dolares / tasa_cambio){
+    juéguesela{
+        resultado metale (dolares desmadeje tasa_cambio)
+    }tortón{
+        safis ~tasa_cambio no puede ser 0~
+    }
+	sarpe resultado
+}
+jefe mae {
+    Bomba: Funcionamento correcto
+	resultado metale llamese cambio_dolares_colones(50 / 0.002)
+	llamese sueltele(resultado)
+    Bomba: Prueba de error de división por 0
+	resultado metale llamese cambio_dolares_colones(50 / 0)
+	llamese sueltele(resultado)
+	sarpe 0
+}

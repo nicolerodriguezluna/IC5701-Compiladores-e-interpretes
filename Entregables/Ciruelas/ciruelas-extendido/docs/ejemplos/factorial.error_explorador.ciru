@@ -1,0 +1,29 @@
+Bomba: Calcula el fibonnacci de n
+mae factorial(n){
+
+	diay siii( n poquitico 0){
+		safis ~N no puede ser negativo~	
+	}
+
+	diay siii( n misma vara 0){
+		sarpe 1
+	}
+
+	resultado metale 1
+
+	upee(n cañazo 0){
+		resultado metale (resultado *  n)
+		n metale (n quitele 1)
+	}
+
+	sarpe resultado
+}
+
+
+Bomba: Para correr el ejemplo se debe colocar todo acá
+mae jefe {
+
+	resultado metale factorial(5)
+	sueltele(resultado)
+	sarpe 0
+}

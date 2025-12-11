@@ -1,0 +1,28 @@
+Bomba: Ejercicio 6 con switch case
+mae actividades_provincia(provincia){
+	como está la vara(provincia){
+		movida ~Guanacaste~{
+			actividad metale ~Jale a surfear a Tamarindo~
+        }
+		movida ~Alajuela~{
+			actividad metale ~Jale al tour de las plantaciones de Starbucks~
+        }
+		movida ~Puntarenas~{
+			actividad metale ~Jale a los senderos de Monteverde~
+        }
+        sino ni modo {
+			actividad metale ~Ni idea mae, pero que la moncha no falte~
+        }
+    }
+    sarpe actividad
+}
+
+jefe mae {
+    Bomba: Caso Puntarenas
+	resultado metale llamese actividades_provincia(~Puntarenas~)
+	llamese sueltele(resultado)
+    Bomba: Caso desconocido
+	resultado metale llamese actividades_provincia(~Heredia~)
+	llamese sueltele(resultado)
+	sarpe 0
+}

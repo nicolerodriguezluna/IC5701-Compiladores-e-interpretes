@@ -1,0 +1,157 @@
+Bomba: Carrera de caracoles en consola
+Bomba: Simula movimiento “aleatorio” usando módulos y contadores
+
+mae simular_aleatorio(contador){
+    Bomba: Retorna contador módulo 3 (0,1 o 2)
+    resto metale contador
+    upee(resto cañazo 2){
+        resto metale (resto quitele 3)
+    }
+    diay siii(resto poquitico 0){
+        resto metale 1
+    }
+    sarpe resto
+}
+
+mae repite_caracter(caracter / veces){
+    Bomba: Devuelve una cadena de ‘veces’ repeticiones de ‘caracter’ usando concatenación
+    resultado metale ~~    
+    i metale 0
+    dele vuelta(i metale 0 / i poquitico veces / i metale (i echele 1)){
+        resultado metale llamese hacer_menjunje(resultado / caracter)
+    }
+    sarpe resultado
+}
+
+mae mostrar_caracol(posicion / nombre){
+    Bomba: Construye “--@ Caracol X” según posición
+    repetidos metale llamese repite_caracter(~-~ / posicion)
+    paso1 metale llamese hacer_menjunje(repetidos / ~@~)
+    paso2 metale llamese hacer_menjunje(paso1 / ~ ~)
+    linea metale llamese hacer_menjunje(paso2 / nombre)
+    llamese sueltele(linea)
+}
+
+mae mostrar_meta(distancia_meta){
+    Bomba: Construye “-----META” según distancia_meta
+    barras metale llamese repite_caracter(~-~ / distancia_meta)
+    linea metale llamese hacer_menjunje(barras / ~META~)
+    llamese sueltele(linea)
+}
+
+mae mostrar_pista(pos1 / pos2 / pos3 / meta){
+    Bomba: Imprime cabecera, luego cada caracol y finalmente la meta
+    llamese sueltele(~=== CARRERA DE CARACOLES ===~)
+    llamese mostrar_caracol(pos1 / ~Caracol 1~)
+    llamese mostrar_caracol(pos2 / ~Caracol 2~)
+    llamese mostrar_caracol(pos3 / ~Caracol 3~)
+    llamese mostrar_meta(meta)
+}
+
+
+jefe mae {
+    Bomba: Pedir palabra-algoritmo para semilla
+    llamese sueltele(~Escribe una palabra para semilla de la carrera:~)
+    semilla_text metale llamese echandi_jiménez()
+    semilla metale llamese trome(semilla_text)
+    diay siii(semilla misma vara 0){
+        semilla metale 1
+    }
+
+    Bomba: Inicializar posiciones y meta según largo de la palabra
+    posicion1 metale 0
+    posicion2 metale 0
+    posicion3 metale 0
+    meta metale semilla
+    hay_ganador metale 0
+    ganador metale 0
+
+    Bomba: El contador inicial usa la semilla
+    contador_turno metale semilla
+
+    llamese sueltele(~¡Comienza la carrera de caracoles!~)
+
+    Bomba: Bucle principal
+    upee(hay_ganador misma vara 0){
+
+        Bomba: Calcular “rem” que varía cada turno (contador_turno módulo 3)
+        rem metale llamese simular_aleatorio(contador_turno)
+
+        Bomba: Definir offsets según “rem” (para dar más variación)
+        offset1 metale 0
+        offset2 metale 0
+        offset3 metale 0
+        diay siii(rem misma vara 0){
+            offset1 metale 2
+            offset2 metale 3
+            offset3 metale 1
+        }
+        diay siii(rem misma vara 1){
+            offset1 metale 3
+            offset2 metale 1
+            offset3 metale 2
+        }
+        diay siii(rem misma vara 2){
+            offset1 metale 1
+            offset2 metale 2
+            offset3 metale 3
+        }
+
+        Bomba: Mover caracol 1 usando contador_turno+offset1
+        tempA metale (contador_turno echele offset1)
+        movimiento1 metale llamese simular_aleatorio(tempA)
+        posicion1 metale (posicion1 echele movimiento1)
+
+        Bomba: Mover caracol 2 usando contador_turno+offset2
+        tempB metale (contador_turno echele offset2)
+        movimiento2 metale llamese simular_aleatorio(tempB)
+        posicion2 metale (posicion2 echele movimiento2)
+
+        Bomba: Mover caracol 3 usando contador_turno+offset3
+        tempC metale (contador_turno echele offset3)
+        movimiento3 metale llamese simular_aleatorio(tempC)
+        posicion3 metale (posicion3 echele movimiento3)
+
+        Bomba: Mostrar estado actual en horizontal
+        llamese mostrar_pista(posicion1 / posicion2 / posicion3 / meta)
+
+        Bomba: Verificar si alguno llegó a la meta
+        diay siii(posicion1 más o igualitico meta){
+            hay_ganador metale 1
+            ganador metale 1
+        }
+        diay siii(posicion2 más o igualitico meta){
+            hay_ganador metale 1
+            ganador metale 2
+        }
+        diay siii(posicion3 más o igualitico meta){
+            hay_ganador metale 1
+            ganador metale 3
+        }
+
+        Bomba: Incrementar contador_turno para la siguiente vuelta
+        contador_turno metale (contador_turno echele 1)
+
+        Bomba: Pausa simulada sin “prints” (evita que imprima líneas vacías)
+        pausa metale 0
+        dele vuelta(pausa metale 0 / pausa poquitico 100000 / pausa metale (pausa echele 1)){
+            Bomba: Bucle vacío para simular pausa
+            temp_pausa metale 0
+        }
+    }
+
+    Bomba: Anunciar ganador
+    llamese sueltele(~¡¡¡ CARACOL ~)
+    diay siii(ganador misma vara 1){
+        llamese sueltele(~1~)
+    }
+    diay siii(ganador misma vara 2){
+        llamese sueltele(~2~)
+    }
+    diay siii(ganador misma vara 3){
+        llamese sueltele(~3~)
+    }
+    llamese sueltele(~ GANA LA CARRERA!~)
+
+    sarpe 0
+}

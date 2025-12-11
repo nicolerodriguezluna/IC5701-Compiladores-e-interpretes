@@ -1,0 +1,52 @@
+# Extensión del lenguaje Ciruelas para el primer semestre de 2025
+
+## Estudiante
+
+Nicole Rodríguez Luna
+
+## Carnet
+
+2021077818
+
+# Implementación del lenguaje de programación ciruelas
+
+Implementación en python, a 4 pasadas (Explorador, Analizador, Verificador,
+Generador de código)
+
+## Ejecución del explorador
+
+python3 ciruelas.py --solo-explorar docs/ejemplos/factorial.ciru
+
+## Ejecución del analizador
+
+python3 ciruelas.py --solo-analizar docs/ejemplos/factorial.ciru
+
+## Ejecución del verificador
+
+python3 ciruelas.py --solo-verificar docs/ejemplos/factorial.ciru
+
+## Ejecución del generador
+
+python3 ciruelas.py --generar-python docs/ejemplos/factorial.ciru
+
+## Ejecución de un transpilado
+
+python3 transpilados/factorial_generado.py
+
+## Otras opciones
+
+Otras opciones (la mayoría no estan implementadas todavía), se pueden ver
+implementando el siguiente comando.
+
+python3 --help
+
+# Licencias
+
+## Código fuente
+
+Ese es licencia GPL v3 (https://www.gnu.org/licenses/gpl-3.0.txt)
+
+## Diseño del lenguaje
+
+Ese es CC-BY-SA (https://creativecommons.org/licenses/by-sa/4.0/legalcode.es)
+

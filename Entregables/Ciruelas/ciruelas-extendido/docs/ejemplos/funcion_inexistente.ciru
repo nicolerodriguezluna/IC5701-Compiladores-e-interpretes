@@ -1,0 +1,12 @@
+Bomba: Llamada a función inexistente 'noexiste'
+mae funcion_inexistente(texto){
+    resultado metale llamese noexiste(texto)
+    llamese sueltele(resultado)
+    sarpe 0
+}
+
+jefe mae {
+    resultado metale llamese funcion_inexistente(~hola~)
+    llamese sueltele(resultado)
+    sarpe 0
+}

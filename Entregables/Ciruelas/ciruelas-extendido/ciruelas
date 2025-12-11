@@ -1,0 +1,3 @@
+#! /bin/bash 
+
+python3 ciruelas.py --generar-python $1 | python3 
